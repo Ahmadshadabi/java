@@ -1,5 +1,5 @@
 # java
-Name:game Little
+Name:game Little hello world
 
 private void _Click(object sender, EventArgs e)
 		{	if (GameStatus == GameStatus.Continue)		{
