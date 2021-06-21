@@ -1,16 +1,16 @@
 # java
 Name:game Little
 
-private void birdBox_Click(object sender, EventArgs e)
+private void _Click(object sender, EventArgs e)
 		{	if (GameStatus == GameStatus.Continue)		{
-				BirdBox birdbox = (BirdBox)sender;
+				Me me = (BirdBox)sender;
 
-			if (birdbox != null && birdbox.Status != "Dead")
+			if (me != null && me.Status != "Dead")
 			{
 					PlayBirdHitSound();
 					birdbox.Status = "Dead";
 				birdbox.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
-					birdbox.Image = Properties.Resources.explosion_animation;
+					Me.Image = Properties.Resources.explosion_animation;
 				}
 				else
 				{
