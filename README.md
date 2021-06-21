@@ -3,13 +3,13 @@ Name:game Little
 
 private void _Click(object sender, EventArgs e)
 		{	if (GameStatus == GameStatus.Continue)		{
-				Me me = (BirdBox)sender;
+				Me me = (me)sender;
 
 			if (me != null && me.Status != "Dead")
 			{
 					PlayBirdHitSound();
-					birdbox.Status = "Dead";
-				birdbox.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+					Me.Status = "Dead";
+				Me.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
 					Me.Image = Properties.Resources.explosion_animation;
 				}
 				else
@@ -32,9 +32,9 @@ private void _Click(object sender, EventArgs e)
 			{
 				FlyingBirds.Remove(BirdTimer);
 
-				BirdTimer.Stop();
-				BirdTimer.BirdBox.Dispose();
-				BirdTimer.Dispose();
+				Me.Stop();
+				Meimer.me.Dispose();
+				Me.Dispose();
 			}
 		}
  
